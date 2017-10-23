@@ -1,66 +1,98 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <script src="https://code.jquery.com/jquery-1.12.3.js"></script>
-    <script>
-    $(function() {
+  <meta charset="utf-8" />
+  <script src="https://code.jquery.com/jquery-1.12.3.js"></script>
+  <script>
+  $(function() {
 
-        var $list, $monForm;
-        $list = $('ul');
-        $monForm = $('#monForm');
+    var $list, $monForm;
+    $list = $('ul');
+    $monForm = $('#monForm');
 
-        $monForm.on('submit', function(e) {
-        e.preventDefault();
-        var text = $('input:text').val();
-        if (text != "") {
-            $list.append('<li>' + text + '</li>');
-            $('input:text').val('');            
-        }
-        });
-
-        $list.on('click', 'li', function() {
-        var $this = $(this);
-        $this.remove();
-        });
-
+    $monForm.on('submit', function(e) {
+      e.preventDefault();
+      var text = $('input:text').val();
+      if (text != "") {
+        $list.append('<li>' + text + '</li>');
+        $('input:text').val('');
+      }
     });
-    </script>
-    <style>
-        body {
-        }
 
-        #list_section {
-        }
+    $list.on('click', 'li', function() {
+      var $this = $(this);
+      $this.remove();
+    });
 
-        h1 {
-        }
+  });
+  </script>
+  <style>
+  body {
+  }
 
-        ul {
-        }
+  #list_section {
 
-        li {
-          -webkit-border-radius: 3px;
-          -moz-border-radius: 3px;
-        }
+    background-color: #000099;
+    font-family: helvetica, arial;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 15px;
+    width: 350px;
+  }
 
-        p {
-        }
+  h1 {
+    color: white;
+  }
 
-        .item {
-        }
+  ul {
+    padding-left: 0px;
 
-        input[type='text'] {
-        }
+  }
 
-        input[type='submit'] {
-        }
+  li {
+    background-color: white;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    height: 30px;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 10px;
+    margin-bottom: 10px;
 
-        #itemField {
-          margin-top: 60px;
-          width: 10%;
-        }
-    </style>
+    list-style-type: none;
+
+    padding-top: 15px;
+    padding-bottom: 0px;
+  }
+
+  p {
+  }
+
+  .item {
+  }
+
+  input[type='text'] {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    width:150px;
+
+  }
+
+  input[type='submit'] {
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+  }
+
+  #itemField {
+    margin-top: 60px;
+
+  }
+  </style>
 </head>
 
 <body>
@@ -68,10 +100,11 @@
     <h1 id="header">Todo list</h1>
     <ul>
       <li class="item">Une première tâche</li>
+      <li class="item">Une deuxième tâche</li>
     </ul>
     <form id="monForm">
-      <input type="text" id="itemField" placeholder="Élément" />
-      <input type="submit" id="add" value="Ajouter" />
+      <input type="text"  id="itemField" placeholder="Élément" />
+      <input type="submit"  id="add" value="Ajouter" />
     </form>
   </div>
 </body>

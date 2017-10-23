@@ -1,23 +1,53 @@
 <html>
-  <head>
-	<meta charset="UTF-8" />	
-    <style>
-        /* À compléter */
-    </style>
-    <title>Gestion des clients</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <style>
+  body{
+    font-family: Helvetica, arial;
+    background-color: #EFECCA
+  }
+  h1{
+    color: #C03000;
+  }
+  h2{
+    color:#4BB5C1;
+  }
+  a{
+    color:#95CA2B;
+    text-decoration: none;
+  }
+  input{
+    border-radius: 5px;
+  }
+  .left{
+    display: inline-block;
+    width: 200px;
+    margin: 5px;
+  }
+  .right{
+    display: inline-block;
+  }
+  .sub{
+    display:inline-block;
+    margin-left: 210px;
+  }
+
+
+  </style>
+  <title>Gestion des clients</title>
+</head>
 <body>
-	<h1>Gestion des clients</h1>
-	<h2>Création d'un client</h2>
-	<a href="./ListerClient.html"><< Retour à la liste</a><br /><br />
-	<form method="POST">
-		<div class="conteneur">
-            <span class="left">Nom</span><span class="right"><input type="text" name="nom" placeholder="Nom" /></span><br/>
-            <span class="left">Prénom</span><span class="right"><input type="text" name="prenom" placeholder="Prénom" /></span><br/>
-            <span class="left">Ville</span><span class="right"><input type="text" name="ville" placeholder="Ville" /></span><br/>
-            <span class="left">Age</span><span class="right"><input type="number" name="age" placeholder="Age" /></span><br/>
-            <span class="sub"><input type="submit" value="Ajouter" /></span>
-        </div>
-	</form>
+  <h1>Gestion des clients</h1>
+  <h2>Création d'un client</h2>
+  <a href="./ListerClient.html"><< Retour à la liste</a><br /><br />
+  <form method="POST">
+    <div class="conteneur">
+      <span class="left">Nom</span><span class="right"><input type="text" name="nom" placeholder="Nom" /></span><br/>
+      <span class="left">Prénom</span><span class="right"><input type="text" name="prenom" placeholder="Prénom" /></span><br/>
+      <span class="left">Ville</span><span class="right"><input type="text" name="ville" placeholder="Ville" /></span><br/>
+      <span class="left">Age</span><span class="right"><input type="number" name="age" placeholder="Age" /></span><br/>
+      <span class="sub"><input type="submit" value="Ajouter" /></span>
+    </div>
+  </form>
 </body>
 </html>
